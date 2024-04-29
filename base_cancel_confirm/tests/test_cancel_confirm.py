@@ -99,7 +99,7 @@ class TestCancelConfirm(common.TransactionCase):
             </form>""",
             }
         )
-        with Form(self.test_record) as f:
-            form = etree.fromstring(f._view["arch"])
-            self.assertTrue(form.xpath("//field[@name='cancel_confirm']"))
-            self.assertTrue(form.xpath("//field[@name='cancel_reason']"))
+        view = self.env[self.test_record._name].get_view(False, "form")
+        form = etree.fromstring(view["arch"])
+        self.assertTrue(form.xpath("//field[@name='cancel_confirm']"))
+        self.assertTrue(form.xpath("//field[@name='cancel_reason']"))
