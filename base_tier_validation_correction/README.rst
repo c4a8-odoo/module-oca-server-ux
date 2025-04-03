@@ -134,6 +134,7 @@ Contributors
 ------------
 
 -  Kitti U. <kittiu@ecosoft.co.th>
+-  Chau Le <chaulb@trobz.com>
 
 Maintainers
 -----------
