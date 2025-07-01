@@ -24,7 +24,7 @@ addon | version | maintainers | summary
 [announcement](announcement/) | 17.0.1.0.0 |  | Notify internal users about relevant organization stuff
 [barcode_action](barcode_action/) | 17.0.1.0.1 |  | Allows to use barcodes as a launcher
 [base_cancel_confirm](base_cancel_confirm/) | 17.0.1.0.0 | <a href='https://github.com/kittiu'><img src='https://github.com/kittiu.png' width='32' height='32' style='border-radius:50%;' alt='kittiu'/></a> | Base Cancel Confirm
-[base_export_manager](base_export_manager/) | 17.0.1.0.0 |  | Manage model export profiles
+[base_export_manager](base_export_manager/) | 17.0.1.0.1 |  | Manage model export profiles
 [base_import_security_group](base_import_security_group/) | 17.0.1.0.0 |  | Group-based permissions for importing CSV files
 [base_menu_visibility_restriction](base_menu_visibility_restriction/) | 17.0.1.0.0 | <a href='https://github.com/victoralmau'><img src='https://github.com/victoralmau.png' width='32' height='32' style='border-radius:50%;' alt='victoralmau'/></a> | Restrict (with groups) menu visibilty
 [base_optional_quick_create](base_optional_quick_create/) | 17.0.1.0.0 |  | Avoid "quick create" on m2o fields, on a "by model" basis
