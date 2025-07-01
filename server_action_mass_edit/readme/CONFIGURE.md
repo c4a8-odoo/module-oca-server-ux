@@ -27,12 +27,12 @@ As a user from the access group *Administration / Settings*, go to *Settings / M
 ![OCA Mass Editing Access V11 to V13](../static/description/OCA_mass_edit_v11_v13.png)
 
 ## Widget Option
-This option allows you to choose the widget to be used in the mass editing action window.
+This option allows you to choose the widget to be used in the Mass Editing Action Window.
 ![OCA Mass Editing Widget](../static/description/17-OCA_Mass_Edit_widget.png)
 
 ## Apply Domain
 
-This option allows you to apply the default domain related to the selected field.
+This option allows you to apply the default Domain related to the selected field.
 ![OCA Mass Editing Domain](../static/description/17-OCA_Mass_Edit_domain.png)
 
 ## Adding a Message
@@ -42,7 +42,7 @@ You can add a *“Message”* to guide the users when using this action.
 
 ## Adding security access group
 
-Go to the *Security* tab and add the *Access group(s)* who can use this action.
+Go to the field *Allowed Groups* and add the *Access group(s)* who can use this action.
 ![OCA Mass Editing Security](../static/description/17-OCA_Mass_Edit_Security.png)
 ![OCA Mass Editing Security Groups](../static/description/17-OCA_Mass_Edit_Security_groups.png)
 ![OCA Mass Editing Security Results](../static/description/17-OCA_Mass_Edit_Security_result.png)
