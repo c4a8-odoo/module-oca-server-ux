@@ -4,7 +4,7 @@
     "name": "Mail suggested recipient unchecked",
     "author": "Tecnativa, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/server-ux",
-    "version": "16.0.1.0.0",
+    "version": "17.0.1.0.0",
     "depends": ["mail"],
     "license": "AGPL-3",
     "category": "Tools",
@@ -12,7 +12,11 @@
     "maintainers": ["victoralmau"],
     "assets": {
         "web.assets_backend": [
-            "mail_suggested_recipient_unchecked/static/src/js/suggested_recipient_info.esm.js",
+            (
+                "after",
+                "mail/static/src/core/web/thread_service_patch.js",
+                "mail_suggested_recipient_unchecked/static/src/js/thread_service_patch.esm.js",
+            ),
         ],
     },
 }
