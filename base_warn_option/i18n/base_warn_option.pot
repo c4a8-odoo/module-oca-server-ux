@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 15.0\n"
+"Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -67,11 +67,6 @@ msgid "Block"
 msgstr ""
 
 #. module: base_warn_option
-#: model:ir.model.fields,help:base_warn_option.field_warn_option__allowed_warning_type
-msgid "Choose the type of warning message"
-msgstr ""
-
-#. module: base_warn_option
 #: model:ir.model.fields,field_description:base_warn_option.field_warn_option__create_uid
 msgid "Created by"
 msgstr ""
@@ -92,18 +87,10 @@ msgid "ID"
 msgstr ""
 
 #. module: base_warn_option
-#: model:ir.model.fields,field_description:base_warn_option.field_warn_option__archive_uid
-msgid "Last Archived by"
-msgstr ""
-
-#. module: base_warn_option
-#: model:ir.model.fields,field_description:base_warn_option.field_warn_option__archive_date
-msgid "Last Archived on"
-msgstr ""
-
-#. module: base_warn_option
-#: model:ir.model.fields,field_description:base_warn_option.field_warn_option____last_update
-msgid "Last Modified on"
+#: model:ir.model.fields,help:base_warn_option.field_warn_option__allowed_warning_type
+msgid ""
+"If no option is selected, the message is valid for both warning messages and"
+" blocking messages"
 msgstr ""
 
 #. module: base_warn_option
@@ -151,9 +138,4 @@ msgstr ""
 #. module: base_warn_option
 #: model:ir.model.fields.selection,name:base_warn_option.selection__warn_option__allowed_warning_type__warning
 msgid "Warning"
-msgstr ""
-
-#. module: base_warn_option
-#: model:ir.model.fields.selection,name:base_warn_option.allowed_warning_type
-msgid "If no option is selected, the message is valid for both warning messages and blocking messages"
 msgstr ""
