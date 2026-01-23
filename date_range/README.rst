@@ -1,7 +1,3 @@
-.. image:: https://odoo-community.org/readme-banner-image
-   :target: https://odoo-community.org/get-involved?utm_source=readme
-   :alt: Odoo Community Association
-
 ==========
 Date Range
 ==========
@@ -17,7 +13,7 @@ Date Range
 .. |badge1| image:: https://img.shields.io/badge/maturity-Mature-brightgreen.png
     :target: https://odoo-community.org/page/development-status
     :alt: Mature
-.. |badge2| image:: https://img.shields.io/badge/license-LGPL--3-blue.png
+.. |badge2| image:: https://img.shields.io/badge/licence-LGPL--3-blue.png
     :target: http://www.gnu.org/licenses/lgpl-3.0-standalone.html
     :alt: License: LGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fserver--ux-lightgray.png?logo=github
@@ -33,7 +29,7 @@ Date Range
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
 This module lets you define global date ranges that can be used to
-filter your values in list views.
+filter your values in tree views.
 
 It also provides a mixin model for developers that extends the model's
 search view so that date ranges can be search as any relational field.
@@ -165,8 +161,6 @@ Contributors
 - David Ramia <<@ramiadavid>>
 - Son Ho <sonhd@trobz.com>
 - Bert Van Groenendael <bert.vangroenendael@dynapps.eu>
-- Andrii Kompaniiets <andrii@moduon.team>
-- Rafael Blasco <rblasco@moduon.team>
 
 Maintainers
 -----------
