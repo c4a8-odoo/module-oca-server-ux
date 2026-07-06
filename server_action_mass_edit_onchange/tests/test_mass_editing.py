@@ -9,7 +9,7 @@ from odoo.addons.server_action_mass_edit.tests.test_mass_editing import (
 
 
 class TestMassEditingWithOnChange(TestMassEditing):
-    @patch("odoo.addons.base.models.res_partner.Partner.onchange_email")
+    @patch("odoo.addons.base.models.res_partner.ResPartner.onchange_company_type")
     def test_wizard_field_onchange(self, patched):
         server_action_partner = self.env["ir.actions.server"].create(
             {
@@ -27,7 +27,7 @@ class TestMassEditingWithOnChange(TestMassEditing):
                 },
                 {
                     "server_action_id": server_action_partner.id,
-                    "field_id": self.env.ref("base.field_res_partner__email").id,
+                    "field_id": self.env.ref("base.field_res_partner__company_type").id,
                     "apply_onchanges": False,
                 },
             ]
@@ -36,7 +36,7 @@ class TestMassEditingWithOnChange(TestMassEditing):
             server_action_partner.mass_edit_play_onchanges,
             {
                 "country_id": True,
-                "email": False,
+                "company_type": False,
             },
         )
         us_country = self.env.ref("base.us")
@@ -61,15 +61,16 @@ class TestMassEditingWithOnChange(TestMassEditing):
         ).create(
             {
                 "selection__country_id": "set",
-                "selection__email": "set",
+                "selection__company_type": "set",
                 "country_id": mx_country,
-                "email": "dummy@email.com",
+                "company_type": "company",
             }
         )
         for partner in partners:
             self.assertEqual(partner.country_id, mx_country)
             # state_id is set to False by _onchange_country_id
             self.assertFalse(partner.state_id)
-            self.assertEqual(partner.email, "dummy@email.com")
-        # onchange_email is not called
+            # company_type is written directly, without playing its onchange
+            self.assertEqual(partner.company_type, "company")
+        # onchange_company_type is not called because apply_onchanges is False
         patched.assert_not_called()
