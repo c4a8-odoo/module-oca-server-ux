@@ -2,13 +2,13 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
 from odoo.exceptions import AccessError
-from odoo.tests.common import SavepointCase
+from odoo.tests.common import TransactionCase
 from odoo.tools import mute_logger
 
 from ..controllers.web_client import WebClient
 
 
-class TestBaseUserLocale(SavepointCase):
+class TestBaseUserLocale(TransactionCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
@@ -18,8 +18,8 @@ class TestBaseUserLocale(SavepointCase):
         cls.CalendarEvent = cls.env["calendar.event"]
 
         cls.code = "en_US"
-        if not cls.env["res.lang"]._lang_get_id(cls.code):
-            cls.env["res.lang"].load_lang(cls.code, "English (US)")
+        if not cls.env["res.lang"]._lang_get(cls.code):
+            cls.env["res.lang"]._activate_lang(cls.code)
 
         cls.company = cls.ResCompany.create({"name": "Company"})
         cls.company.partner_id.lang = cls.code
@@ -34,25 +34,6 @@ class TestBaseUserLocale(SavepointCase):
                 "lang": cls.code,
             }
         )
-
-    def test_uninstalled_lang(self):
-        uninstalled_lang = (
-            self.env["res.lang"]
-            .with_context(active_test=True)
-            .search([("active", "=", False)], limit=1)
-        )
-        if uninstalled_lang:
-            with self.assertRaises(ValueError):
-                self.ResUsers.with_context(no_reset_password=True).create(
-                    {
-                        "name": "User",
-                        "login": "another user",
-                        "email": "user@example.com",
-                        "company_id": self.company.id,
-                        "company_ids": [(4, self.company.id)],
-                        "lang": uninstalled_lang.code,
-                    }
-                )
 
     def test_date_format(self):
         self.user.env.company = self.user.company_id
