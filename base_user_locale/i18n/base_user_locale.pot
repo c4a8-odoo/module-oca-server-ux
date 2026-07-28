@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 16.0\n"
+"Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -12,14 +12,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
-
-#. module: base_user_locale
-#: model_terms:ir.ui.view,arch_db:base_user_locale.res_config_settings_view_form
-msgid ""
-"<span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-"
-"specific.\" role=\"img\" aria-label=\"Values set here are company-"
-"specific.\" groups=\"base.group_multi_company\"/>"
-msgstr ""
 
 #. module: base_user_locale
 #: model:ir.model,name:base_user_locale.model_calendar_event
@@ -43,6 +35,16 @@ msgstr ""
 
 #. module: base_user_locale
 #: model_terms:ir.ui.view,arch_db:base_user_locale.res_config_settings_view_form
+msgid "Configure global override of decimal seperator for all users."
+msgstr ""
+
+#. module: base_user_locale
+#: model_terms:ir.ui.view,arch_db:base_user_locale.res_config_settings_view_form
+msgid "Configure global override of thousand separator for all users."
+msgstr ""
+
+#. module: base_user_locale
+#: model_terms:ir.ui.view,arch_db:base_user_locale.res_config_settings_view_form
 msgid "Configure global override of time format for all users."
 msgstr ""
 
@@ -55,6 +57,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base_user_locale.field_res_company__date_format
 #: model:ir.model.fields,field_description:base_user_locale.field_res_config_settings__date_format
 #: model:ir.model.fields,field_description:base_user_locale.field_res_users__date_format
+#: model_terms:ir.ui.view,arch_db:base_user_locale.res_config_settings_view_form
 msgid "Date Format"
 msgstr ""
 
@@ -62,6 +65,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base_user_locale.field_res_company__decimal_point
 #: model:ir.model.fields,field_description:base_user_locale.field_res_config_settings__decimal_point
 #: model:ir.model.fields,field_description:base_user_locale.field_res_users__decimal_point
+#: model_terms:ir.ui.view,arch_db:base_user_locale.res_config_settings_view_form
 msgid "Decimal Separator"
 msgstr ""
 
@@ -116,6 +120,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base_user_locale.field_res_company__thousands_sep
 #: model:ir.model.fields,field_description:base_user_locale.field_res_config_settings__thousands_sep
 #: model:ir.model.fields,field_description:base_user_locale.field_res_users__thousands_sep
+#: model_terms:ir.ui.view,arch_db:base_user_locale.res_config_settings_view_form
 msgid "Thousands Separator"
 msgstr ""
 
@@ -129,6 +134,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base_user_locale.field_res_company__time_format
 #: model:ir.model.fields,field_description:base_user_locale.field_res_config_settings__time_format
 #: model:ir.model.fields,field_description:base_user_locale.field_res_users__time_format
+#: model_terms:ir.ui.view,arch_db:base_user_locale.res_config_settings_view_form
 msgid "Time Format"
 msgstr ""
 
@@ -153,5 +159,6 @@ msgstr ""
 #: model:ir.model.fields,field_description:base_user_locale.field_res_company__week_start
 #: model:ir.model.fields,field_description:base_user_locale.field_res_config_settings__week_start
 #: model:ir.model.fields,field_description:base_user_locale.field_res_users__week_start
+#: model_terms:ir.ui.view,arch_db:base_user_locale.res_config_settings_view_form
 msgid "Week Start"
 msgstr ""
